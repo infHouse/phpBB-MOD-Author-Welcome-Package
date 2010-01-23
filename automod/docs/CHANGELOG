@@ -1,0 +1,55 @@
+AutoMOD Changelog
+
+- Changes since 1.0.0 Release Candidate 2
+ + [Feature] Allow MOD uploads directly in AutoMOD
+ + [Feature] MODX 1.2.3 support
+ + [Change] MODs installed by Compressed File Download can be downloaded multiple times
+ + [Change] Now using a UMIL-based installer
+ + [Fix] Better support for complex combinations of in-line actions
+ + [Fix] Allow user to choose FTP method due to reported difficulties with PHP FTP extension
+ + [Fix] Friendlier error-handling in spots
+ + [Fix] Special characters in file names are properly handled
+ + [Fix] Force Install feature was broken when processing child MODX files
+ + [Fix] Correct file selection when MOD has multiple MODX files in its directory
+ + [Fix] Inherited styles now properly handled by AutoMOD 
+
+- Changes since 1.0.0 Release Candidate 1
+ + [Change] Show the filename when an XML parsing error occurs
+ + [Fix] Uninstaller backups now work properly
+ + [Fix] Correctly localise DIY Instructions
+ + [Fix] Do not offer to install contribs until after a MOD is installed
+ + [Fix] Uninstallation when mutliple actions are in an <edit> tag
+ + [Fix] Allow AutoMOD installation to work on MSSQL
+
+- Changes since 1.0.0 Beta 2
+ + [Feature] Back up all files before editing them
+ + [Feature] More stern warning prompt when using "force install" button
+ + [Change] Paths are handled without passing $phpbb_root_path around
+ + [Fix] Improved support for MODX 1.0.x 
+ + [Fix] Correct cosmetic issues under MSIE
+ + [Fix] Do not copy files when installation fails
+ + [Fix] Database changes are performed when using "force install"
+ + [Fix] Whitespace handling in uninstall
+ + [Fix] Inline action handling in uninstall
+ + [Fix] Single edit with multiple actions is now handled properly by uninstallation
+ + [Fix] Correctly build SQL query for forced style installs
+ + [Fix] Duplicate table prefix alteration occurred in some cases
+ + [Fix] CHMODs are octal, not hex
+
+- Changes since 1.0.0 Beta 1
+ + [Feature] Allow users to "force" a MOD's template instructions on another template
+ + [Feature] Support MODX 1.2.2
+ + [Feature] Allow admins to select file and directory permissions with direct & ftp write methods
+ + [Feature] Move option to preview changes into admin panel
+ + [Fix] Installer works without enabling DEBUG_EXTRA
+ + [Fix] Uninstall works with the FTP write method
+ + [Fix] Fail without PHP notices when a directory cannot be created
+ + [Fix] Only show FTP settings dialogue box when FTP is chosen as write method
+ + [Fix] Automatically detect FTP method (ftp or fsock)
+ + [Fix] Display changelogs correctly in details mode
+ + [Fix] Improved handling of linked files in "details" mode
+ + [Fix] Improved handling of MODX 1.0.x packaging standards
+ + [Fix] Properly handle uninstallation of "in-line replace" and replace-with actions
+ + [Fix] Correct and add a number of language variables
+ + [Fix] Correctly copy "deep" directory structures
+ + [Fix] Improved bookkeeping on templates and languages

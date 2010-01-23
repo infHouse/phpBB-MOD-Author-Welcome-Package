@@ -1,0 +1,38 @@
+=== WHAT YOU NEED
+- Idea or inspiration
+- Editor
+- Method to test
+- Knowledge of PHP, XHTML, and CSS (possibly JS as well)
+=== WHAT YOU HAVE INCLUDED
+- AutoMOD + Documentation
+- UMIL + UMIF example files + UMIL Documentation
+- MODX quickstart files
+=== WHAT YOU ARE REQUIRED TO DO/USE
+- MODX
+- DBAL
+- request_var()
+- template system (unless working with feeds)
+- $user (format_time() and localization)
+=== CODING RESOURCES
+- phpBB Wiki
+- phpBB MOD Author discussion
+- Area51 discussion
+- php.net
+=== CODING HABITS
+- escape/typecast at point-of-query
+- make use of dbal::sql_in_set() !
+=== CODING PROCESS FOR LARGER MODS
+- What do you want it to do?
+- Features
+- Requirements
+- Design database tables and modifications
+- Code the PHP
+- Code the templates
+- Assemble the MODX from necessary edits
+=== TOOLS
+- Version control (SVN/Git)
+- Version control tools (rapid svn, tortoisesvn, msysgit)
+- Version control repo hosts
+- Coding tools (IDEs, Notepad++, gedit, etc)
+- Testing tools (XAMPP, LAMP, MAMP, etc)
+- DB administration tools (Navicat)

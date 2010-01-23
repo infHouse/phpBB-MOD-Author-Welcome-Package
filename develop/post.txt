@@ -1,0 +1,18 @@
+Install MODs, observe what they do. See how they work, take them apart, adjust what they do to see what happens, and all that. If you get errors, don't panic -- try to figure out what you did that caused the errors, you'll learn faster.
+
+Always build MODs on a vanilla phpBB installation, unless you are doing custom coding work.
+You can record the stuff you added in a text file if you want, but what I recommend is actually slowly writing the MODx file as you go (add in your edits, file copy actions, etc.)
+
+There's a bit more info here: http://www.phpbb.com/mods/
+Be sure to read the coding guidelines file in the docs/ folder of phpBB, as it does contain a lot of information that you'll need to know when coding. There's also a copy here: http://code.phpbb.com/svn/phpbb/branches/phpBB-3_0_0/phpBB/docs/coding-guidelines.html
+
+Finally, when you are coding, you'll need some tools /to/ code with. There's a list of tools for development over at .com (what many 'modders refer to phpBB.com as) in this topic: http://www.phpbb.com/community/viewtopic.php?f=71&t=1669305
+Personally, I use Komodo Edit, Filezilla, XAMPP, and I also use git instead of SVN (much better by a long shot).
+
+Setting up a localhost installation is a great idea, as well, for testing. You won't want to put stuff live when you are coding, as it may introduce issues that someone could exploit while you are developing -- there's instructions on setting up a localhost install here: http://startrekguide.com/community/viewtopic.php?f=50&t=2149
+
+When you think your MODs are good enough, register on .com (if you haven't done so) and submit the package of your MOD to the MODDB (MODs Database). Be sure that your MOD will install with AutoMOD, that it works flawlessly, and that it is secure.
+
+I guess the last thing I have to say is, when you have learned a bit, you'll be wise to either install this addon (https://addons.mozilla.org/en-US/firefox/addon/8984) for Firefox or keep a tab of PHP.net open whenever you are coding, as having the function documentation is very handy at times.
+
+Good luck. :)

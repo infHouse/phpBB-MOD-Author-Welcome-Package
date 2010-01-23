@@ -1,0 +1,69 @@
+==============================================================================
+AUTOMOD
+==============================================================================
+Description:
+AutoMOD is a tool designed to parse and automatically install MODX MODifications for phpBB3. 
+It also has the ability to uninstall MODs. 
+It is a useful tool for MOD authors and end users alike: All MODs are installed with AutoMOD prior to being accepted in the MODs Database. As such, any MOD listed in the MOD Database should install with AutoMOD. 
+Support for AutoMOD is available via the forums.
+
+Included version:
+1.0.0 RC3
+
+Related Links: 
+http://www.phpbb.com/mods/modx/ - MODX
+http://www.phpbb.com/mods/db/ - phpBB.com MODs Database
+http://www.phpbb.com/bugs/modteamtools/ - phpBB.com MOD Tools Bug Tracker
+http://code.phpbb.com/repositories/show/6 - AutoMOD SVN Repository
+
+Available at: 
+http://www.phpbb.com/mods/automod/
+
+==============================================================================
+UMIL
+==============================================================================
+Description:
+UMIL (Unified MOD Install Library) is a utility that enables MOD Authors to create simple installation scripts for their MOD that allow the user to install, update, or uninstall a Modification quickly.
+Released under the GNU GPL license, UMIL is included within MOD Packages to make MOD Installations simple and automatic.
+
+UMIL performs basic database actions that would be required to install a MOD; UMIL does not perform file edits. 
+AutoMOD is the tool of choice for file edits and installing MODs from a MODX file. AutoMOD does not perform module, permission installations, etc.; this is the purpose for which UMIL was developed.
+
+What can UMIL do?
+
+The Unified MOD Install Library can perform any of the following operations as specified by a UMIF (Unified MOD Install File) provided by the Modification:
+ - Add, update, or remove configs
+ - Add or remove modules
+ - Add or remove permissions
+ - Set or unset permission options from roles and groups
+ - Add or remove database tables
+ - Add, update, or remove table columns
+ - Add or remove table keys/indexes
+ - Purge / Refresh Caches
+
+Included version:
+1.0.1-pl1
+
+Related links: 
+http://wiki.phpbb.com/Umil - UMIL documentation on the phpBB Wiki
+http://www.phpbb.com/mods/umil/create.php - UMIF Creation Tool
+http://www.phpbb.com/bugs/modteamtools/ - phpBB.com MOD Tools Bug Tracker
+http://code.phpbb.com/repositories/show/umil - UMIL SVN Repository
+
+Available at:
+http://www.phpbb.com/mods/umil/
+
+==============================================================================
+MODX
+==============================================================================
+
+Description:
+MODX is a format by the phpBB MOD Team that is used to describe, in detail, changes between web applications suitable for distribution. 
+It is an XML-based format for both MOD writers and users alike.
+
+Included version:
+1.2.3
+
+Related links:
+http://www.phpbb.com/mods/modx/spec/ - Technical MODX documentation
+http://www.phpbb.com/mods/modx/faq/ - MODX Frequently Asked Questions
