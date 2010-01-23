@@ -69,7 +69,7 @@ class readme_config
 	public static function init()
 	{
 		self::$page_title = 'phpBB3 MOD Author Welcome Package';
-		self::$page_desc = 'How to get started building phpBB MODs';
+		self::$page_desc = 'Building Communities';
 		self::$page_subtitle = 'Building phpBB3 MODs';
 		self::$author_info = array(
 			1 => array(
@@ -97,10 +97,10 @@ class readme_config
 			'description'	=> 'phpBB 3.0.x MOD Author Welcome Package',
 			'emulate_ie7'	=> true, // Compatibility mode for that stupid browser that Microsoft makes
 		);
-		self::$intro = 'Hello there, and welcome to the phpBB MOD Author Welcome Package.  I am Obsidian, and I have been working with modifying phpBB for about two years now.  I`m writing this to help get you started with learning to build MODs for phpBB 3.0.x, and to provide you with the resources and tools you need to succeed.';
+		self::$intro = 'Hey there, and welcome to the phpBB MOD Author Welcome Package. <br />This guide is intended to help you become a MOD author; within, you will learn how to modify phpBB to suit your needs and the needs of others, and how to do it <em>right</em>.';
 		self::$disclaimer = '';
 		self::$main_data = array(
-			array(
+			/*array(
 				'section_title'		=> 'test',
 				'unique_name'		=> 'test',
 				'author_id'			=> 1,
@@ -111,8 +111,92 @@ class readme_config
 
 	' . md5('test')),
 				),
+			),*/
+			array(
+				'section_title'		=> 'Introduction',
+				'unique_name'		=> 'intro',
+				'contents'			=> array(
+					array(
+						'content' 		=> file_get_contents('./txt/intro.txt'),
+						'author'		=> 1,
+					),
+					array(
+						'content' 		=> 'blah',
+						'author'		=> 2,
+					),
+				),
 			),
-	
+			array(
+				'section_title'		=> 'Coding for phpBB: What you will need',
+				'unique_name'		=> 'overview',
+				'contents'			=> array(
+					array(
+						'content' 		=> 'blah',
+						'author'		=> 1,
+					),
+				),
+			),
+			
+			array(
+				'section_title'		=> 'What is included within the Welcome Package',
+				'unique_name'		=> 'included_items',
+				'contents'			=> array(
+					array(
+						'content' 		=> 'blah',
+						'author'		=> 1,
+					),
+				),
+			),
+			array(
+				'section_title'		=> 'Coding requirements',
+				'unique_name'		=> 'requirements',
+				'contents'			=> array(
+					array(
+						'content' 		=> 'blah',
+						'author'		=> 2,
+					),
+				),
+			),
+			array(
+				'section_title'		=> 'Coding resources and links',
+				'unique_name'		=> 'resources',
+				'contents'			=> array(
+					array(
+						'content' 		=> 'blah',
+						'author'		=> 1,
+					),
+				),
+			),
+			array(
+				'section_title'		=> 'Desired coding habits with phpBB',
+				'unique_name'		=> 'habits',
+				'contents'			=> array(
+					array(
+						'content' 		=> 'blah',
+						'author'		=> 2,
+					),
+				),
+			),
+			array(
+				'section_title'		=> 'Building larger MODs: Step by Step',
+				'unique_name'		=> 'codingprocess',
+				'contents'			=> array(
+					array(
+						'content' 		=> 'blah',
+						'author'		=> 1,
+					),
+				),
+			),
+			array(
+				'section_title'		=> 'Third party tools for development',
+				'unique_name'		=> 'thirdpartytools',
+				'contents'			=> array(
+					array(
+						'content' 		=> 'blah',
+						'author'		=> 1,
+					),
+				),
+			),
 		);
 		self::$footer = 'MOD Author Welcome Package &copy; 2010 ' . readme_html::bold('Obsidian');
 	}
@@ -188,7 +272,7 @@ class readme
 		// Build the list of topics that will be discussed
 		foreach(readme_config::$main_data as $row)
 		{
-			$this->append("<li><a href=\"{$row['unique_name']}\">{$row['section_title']}</a></li>");
+			$this->append("<li><a href=\"#{$row['unique_name']}\">{$row['section_title']}</a></li>");
 		}
 
 		$this->append('</ul>
@@ -199,28 +283,28 @@ class readme
 		foreach(readme_config::$main_data as $row)
 		{
 			$this->append("<hr />
-				<a name=\"{$row['unique_name']}\"></a><h2>{$row['section_title']}</h2>" . '
-				<div class="paragraph">
+				<a name=\"{$row['unique_name']}\"></a><h2>{$row['section_title']}</h2>");
+			foreach($row['contents'] as $c_row)
+			{
+				$this->append('<div class="paragraph">
 					<div class="inner"><span class="corners-top"><span></span></span>
-						<div class="content" ' . ((readme_config::DISABLE_AUTHOR_MODE === true) ? 'style="width: 100%;" ' : '') . '>') . "\n";
-			foreach($row['contents'] as $content)
-			{
-				$this->append('<p>' . str_replace("\n", "<br />\n", $content) . '</p>', true);
+						<div class="content post" ' . ((readme_config::DISABLE_AUTHOR_MODE === true) ? 'style="width: 100%;" ' : '') . '>');
+				$this->append(str_replace("\n", "<br />\n", $c_row['content']), true);
+				$this->append('</div>');
+				if(readme_config::DISABLE_AUTHOR_MODE !== true)
+				{
+					$this->append('<dl class="postprofile"> 
+						<dt> 
+							<a href="' . readme_config::$author_info[$c_row['author']]['phpbb_com'] . '"><img src="' . readme_config::$author_info[$c_row['author']]['avatar'] . '" width="' . readme_config::$author_info[$c_row['author']]['avatar_wid'] . '" height="' . readme_config::$author_info[$c_row['author']]['avatar_hei'] . '" alt="User avatar" /></a><br /> 
+							<a href="' . readme_config::$author_info[$c_row['author']]['phpbb_com'] . '" ' . ((readme_config::$author_info[$c_row['author']]['color']) ? 'style="color: ' . readme_config::$author_info[$c_row['author']]['color'] . ';" class="username-coloured"' : '') . '>' . readme_config::$author_info[$c_row['author']]['name'] . '</a> 
+						</dt> 
+						<dd>' . readme_config::$author_info[$c_row['author']]['rank'] . '</dd>
+					</dl>');
+				}
+				$this->append('<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+					<span class="corners-bottom"><span></span></span></div>
+				</div>');
 			}
-			$this->append('</div>');
-			if(readme_config::DISABLE_AUTHOR_MODE !== true)
-			{
-				$this->append('<dl class="postprofile"> 
-					<dt> 
-						<a href="' . readme_config::$author_info[$row['author_id']]['phpbb_com'] . '"><img src="' . readme_config::$author_info[$row['author_id']]['avatar'] . '" width="' . readme_config::$author_info[$row['author_id']]['avatar_wid'] . '" height="' . readme_config::$author_info[$row['author_id']]['avatar_hei'] . '" alt="User avatar" /></a><br /> 
-						<a href="' . readme_config::$author_info[$row['author_id']]['phpbb_com'] . '" ' . ((readme_config::$author_info[$row['author_id']]['color']) ? 'style="color: ' . readme_config::$author_info[$row['author_id']]['color'] . ';" class="username-coloured"' : '') . '>' . readme_config::$author_info[$row['author_id']]['name'] . '</a> 
-					</dt> 
-					<dd>' . readme_config::$author_info[$row['author_id']]['rank'] . '</dd>
-				</dl>');
-			}
-			$this->append('<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
-				<span class="corners-bottom"><span></span></span></div>
-			</div>');
 		}
 
 		$this->append('<!-- END DOCUMENT -->
@@ -254,7 +338,7 @@ class readme_html
 		switch(strtolower($name))
 		{
 			case 'code':
-				return "</p><div class=\"codebox\"><pre>{$arguments[0]}</pre></div><p>";
+				return "<div class=\"codebox\"><pre>{$arguments[0]}</pre></div>";
 			break;
 	
 			case 'bold':
