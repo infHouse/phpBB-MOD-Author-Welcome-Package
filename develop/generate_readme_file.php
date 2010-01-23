@@ -6,6 +6,7 @@
  *  MOD Author Welcome Package - Readme File Generator
  *-------------------------------------------------------------------
  *	Script info:
+ * SVN ID:		$Id$
  * Copyright:	(c) 2010 -- Obsidian
  * License:		http://opensource.org/licenses/gpl-2.0.php | GNU Public License v2
  * Package:		welcome_package
@@ -138,6 +139,7 @@ class readme
 			' . ((readme_config::$meta_info['emulate_ie7']) ? '<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />' : '') . '
 			<title>' . readme_config::$page_title . '</title>
 			<link href="' . readme_config::STYLE_ROOT_PATH . 'stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+			<!-- $Id$ -->
 			</head>
 			<body id="phpbb" class="section-docs">
 			<div id="wrap">
