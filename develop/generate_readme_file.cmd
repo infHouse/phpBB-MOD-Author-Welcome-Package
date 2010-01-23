@@ -34,7 +34,7 @@ TITLE Readme File Generator
 SET PHP=C:\xampp
 
 :: Where is the script located
-SET SCRIPT=C:\Code\welcome_package\develop
+SET SCRIPT=C:\Code\mod_welcome_package\develop
 
 :: Run the script!
 "%PHP%\php\php.exe" "%SCRIPT%\generate_readme_file.php" %SCRIPT% %2 %3 %4
