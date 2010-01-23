@@ -113,17 +113,10 @@ class readme_config
 class readme
 {
 	// Revision number for this document
-	protected $revision = 0;
-	
+	protected $revision = '$Id$';
+
 	protected $data = '';
-	
-	// Fetch the revision number we're on for this readme's generation
-	public function __construct()
-	{
-		$this->revision = ((int) file_get_contents('./revision.txt')) + 1;
-		return file_put_contents('./revision.txt', (string) $this->revision, LOCK_EX);
-	}
-	
+
 	// Here we build the HTML page.
 	// Get ready for some work.
 	public function __toString()
@@ -204,7 +197,7 @@ class readme
 
 		$return .= $this->append('<!-- END DOCUMENT -->
 					<div id="page-footer">
-						<div class="version">' . readme_config::$footer . ' | $Rev: ' . $this->revision . ' $ </div>
+						<div class="version">' . readme_config::$footer . ' | ' . $this->revision . ' </div>
 					</div>
 				</div></div>
 				<div>
