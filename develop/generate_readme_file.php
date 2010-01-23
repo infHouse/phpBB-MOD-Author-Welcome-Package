@@ -131,7 +131,7 @@ class readme_config
 				'unique_name'		=> 'overview',
 				'contents'			=> array(
 					array(
-						'content' 		=> 'blah',
+						'content' 		=> file_get_contents('./txt/needs.txt'),
 						'author'		=> 1,
 					),
 				),

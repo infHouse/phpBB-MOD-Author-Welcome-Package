@@ -1,4 +1,4 @@
-<h4>Hello there!</h4>
+<h3>Hello there!</h3>
 I am Obsidian, and I have been working with modifying phpBB for about two years now. I'm writing this to help get you started with learning to build MODs for phpBB 3.0.x (codenamed "Olympus"), and to provide you with the resources and tools you need to succeed.
 
 <h4>Not sure what a phpBB MOD is?</h4>
