@@ -282,7 +282,7 @@ class readme
 
 		foreach(readme_config::$main_data as $row)
 		{
-			$this->append("<hr />
+			$this->append("<br /><hr />
 				<a name=\"{$row['unique_name']}\"></a><h2>{$row['section_title']}</h2>");
 			foreach($row['contents'] as $c_row)
 			{
