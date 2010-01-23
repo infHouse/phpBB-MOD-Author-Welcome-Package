@@ -24,7 +24,7 @@
 <div id="doc-description">
 <a href="#" id="logo"><img src="html/style/site_logo.gif" alt="" /></a>
 <h1>phpBB3 MOD Author Welcome Package</h1>
-<p>How to get started building phpBB MODs</p>
+<p>Building Communities</p>
 <p style="display: none;"><a href="#start_here">Skip</a></p>
 </div>
 <span class="corners-bottom"><span></span></span></div>
@@ -33,27 +33,185 @@
 <a name="start_here"></a>
 <div id="page-body">
 <!-- BEGIN DOCUMENT -->
-<p>Hello there, and welcome to the phpBB MOD Author Welcome Package.  I am Obsidian, and I have been working with modifying phpBB for about two years now.  I`m writing this to help get you started with learning to build MODs for phpBB 3.0.x, and to provide you with the resources and tools you need to succeed.</p>
+<p>Hey there, and welcome to the phpBB MOD Author Welcome Package. <br />This guide is intended to help you become a MOD author; within, you will learn how to modify phpBB to suit your needs and the needs of others, and how to do it <em>right</em>.</p>
 <h1>Building phpBB3 MODs</h1>
 <div class="paragraph menu">
 <div class="inner"><span class="corners-top"><span></span></span>
 <div class="content">
 <ul>
-<li><a href="test">test</a></li>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#overview">Coding for phpBB: What you will need</a></li>
+<li><a href="#included_items">What is included within the Welcome Package</a></li>
+<li><a href="#requirements">Coding requirements</a></li>
+<li><a href="#resources">Coding resources and links</a></li>
+<li><a href="#habits">Desired coding habits with phpBB</a></li>
+<li><a href="#codingprocess">Building larger MODs: Step by Step</a></li>
+<li><a href="#thirdpartytools">Third party tools for development</a></li>
 </ul>
 </div>
 <span class="corners-bottom"><span></span></span></div>
 </div>
 <hr />
-<a name="test"></a><h2>test</h2>
+<a name="intro"></a><h2>Introduction</h2>
 <div class="paragraph">
 <div class="inner"><span class="corners-top"><span></span></span>
-<div class="content" >
-<p>This is just a test.<br />
-<br />
-</p><div class="codebox"><pre>MD5<br />
-<br />
-	098f6bcd4621d373cade4e832627b4f6</pre></div><p></p>
+<div class="content post" >
+<h4>Hello there!</h4><br />
+I am Obsidian, and I have been working with modifying phpBB for about two years now. I'm writing this to help get you started with learning to build MODs for phpBB 3.0.x (codenamed "Olympus"), and to provide you with the resources and tools you need to succeed.<br />
+<br />
+<h4>Not sure what a phpBB MOD is?</h4><br />
+Well, I'll explain.<br />
+Because of phpBB being an open-source project, you are free to modify it to suit your needs as you wish.  When you modify your copy of phpBB, document the changes you have made, and distribute those changes, in essence you have released a MOD.<br />
+In reality, it is a bit more involved than that, but don't sweat it; we'll get to that later.<br />
+<br />
+<h4>What all is in this welcome package?</h4><br />
+This welcome package contains the guide that you are reading now, and several tools that are used by many MOD authors that you may want to use yourself.  A more in-depth overview of the tools included will appear later on in this guide.<br />
+<br />
+<h4>What will this guide cover?</h4><br />
+Actually, it will be a broad range of things, including:<br />
+<ul><br />
+	<li>The development process</li><br />
+	<li>Tools of the trade</li><br />
+	<li>Coding and development resources</li><br />
+	<li>Utilizing built-in phpBB3 functionality</li><br />
+	<li>Humorous source code comments in phpBB3</li><br />
+</ul><br />
+<br />
+Okay, maybe not so much with that last one.  Ahh well.  I'll let Syntax have his say.
+</div>
+<dl class="postprofile">
+<dt>
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595"><img src="html/images/xkcd_avvy.png" width="100" height="100" alt="User avatar" /></a><br />
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595" >Obsidian</a>
+</dt>
+<dd>Jr. MOD Validator</dd>
+</dl>
+<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<div class="paragraph">
+<div class="inner"><span class="corners-top"><span></span></span>
+<div class="content post" >
+blah
+</div>
+<dl class="postprofile">
+<dt>
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=873955"><img src="html/images/engie_hat.png" width="100" height="100" alt="User avatar" /></a><br />
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=873955" style="color: #660099;" class="username-coloured">SyntaxError90</a>
+</dt>
+<dd>MOD Team Member</dd>
+</dl>
+<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+<a name="overview"></a><h2>Coding for phpBB: What you will need</h2>
+<div class="paragraph">
+<div class="inner"><span class="corners-top"><span></span></span>
+<div class="content post" >
+blah
+</div>
+<dl class="postprofile">
+<dt>
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595"><img src="html/images/xkcd_avvy.png" width="100" height="100" alt="User avatar" /></a><br />
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595" >Obsidian</a>
+</dt>
+<dd>Jr. MOD Validator</dd>
+</dl>
+<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+<a name="included_items"></a><h2>What is included within the Welcome Package</h2>
+<div class="paragraph">
+<div class="inner"><span class="corners-top"><span></span></span>
+<div class="content post" >
+blah
+</div>
+<dl class="postprofile">
+<dt>
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595"><img src="html/images/xkcd_avvy.png" width="100" height="100" alt="User avatar" /></a><br />
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595" >Obsidian</a>
+</dt>
+<dd>Jr. MOD Validator</dd>
+</dl>
+<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+<a name="requirements"></a><h2>Coding requirements</h2>
+<div class="paragraph">
+<div class="inner"><span class="corners-top"><span></span></span>
+<div class="content post" >
+blah
+</div>
+<dl class="postprofile">
+<dt>
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=873955"><img src="html/images/engie_hat.png" width="100" height="100" alt="User avatar" /></a><br />
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=873955" style="color: #660099;" class="username-coloured">SyntaxError90</a>
+</dt>
+<dd>MOD Team Member</dd>
+</dl>
+<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+<a name="resources"></a><h2>Coding resources and links</h2>
+<div class="paragraph">
+<div class="inner"><span class="corners-top"><span></span></span>
+<div class="content post" >
+blah
+</div>
+<dl class="postprofile">
+<dt>
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595"><img src="html/images/xkcd_avvy.png" width="100" height="100" alt="User avatar" /></a><br />
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595" >Obsidian</a>
+</dt>
+<dd>Jr. MOD Validator</dd>
+</dl>
+<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+<a name="habits"></a><h2>Desired coding habits with phpBB</h2>
+<div class="paragraph">
+<div class="inner"><span class="corners-top"><span></span></span>
+<div class="content post" >
+blah
+</div>
+<dl class="postprofile">
+<dt>
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=873955"><img src="html/images/engie_hat.png" width="100" height="100" alt="User avatar" /></a><br />
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=873955" style="color: #660099;" class="username-coloured">SyntaxError90</a>
+</dt>
+<dd>MOD Team Member</dd>
+</dl>
+<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+<a name="codingprocess"></a><h2>Building larger MODs: Step by Step</h2>
+<div class="paragraph">
+<div class="inner"><span class="corners-top"><span></span></span>
+<div class="content post" >
+blah
+</div>
+<dl class="postprofile">
+<dt>
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595"><img src="html/images/xkcd_avvy.png" width="100" height="100" alt="User avatar" /></a><br />
+<a href="http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595" >Obsidian</a>
+</dt>
+<dd>Jr. MOD Validator</dd>
+</dl>
+<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+<a name="thirdpartytools"></a><h2>Third party tools for development</h2>
+<div class="paragraph">
+<div class="inner"><span class="corners-top"><span></span></span>
+<div class="content post" >
+blah
 </div>
 <dl class="postprofile">
 <dt>
