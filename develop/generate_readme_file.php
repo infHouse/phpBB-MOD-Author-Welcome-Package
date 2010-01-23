@@ -69,7 +69,7 @@ class readme_config
 	public static function init()
 	{
 		self::$page_title = 'phpBB3 MOD Author Welcome Package';
-		self::$page_desc = 'Building Communities';
+		self::$page_desc = 'Open Source at its finest';
 		self::$page_subtitle = 'Building phpBB3 MODs';
 		self::$author_info = array(
 			1 => array(

@@ -78,11 +78,11 @@ h3 {
 h4 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	margin-bottom: 3px;
-	padding-bottom: 2px;
+	/*margin-bottom: 3px;*/
+	/*padding-bottom: 2px;*/
 	font-size: 1.05em;
 	color: #115098;
-	margin-top: 20px;
+	/*margin-top: 5px;*/
 }
 
 .good { color: green; }
@@ -262,8 +262,8 @@ a:active	{ color: #368AD2; }
 }
 
 .content {
-	padding: 0;
-	line-height: 1.48em;
+	/*padding: 8px 0 8px 0;*/
+	line-height: 1.3em;
 	color: #333333;
 	width: 84%;
 	float: left;
@@ -431,4 +431,8 @@ a:active	{ color: #368AD2; }
 	font-weight: bold;
 	display: inline !important;
 	padding: 0 !important;
+}
+
+.post ul li {
+	line-height: 0.3em;
 }
