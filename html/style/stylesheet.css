@@ -265,6 +265,9 @@ a:active	{ color: #368AD2; }
 	padding: 0;
 	line-height: 1.48em;
 	color: #333333;
+	width: 84%;
+	float: left;
+	clear: both;
 }
 
 .content h2, .panel h2 {
@@ -349,4 +352,83 @@ a:active	{ color: #368AD2; }
 	float: left;
 	clear: both;
 	margin-right: 1em;
+}
+
+/* Profile links */
+.postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a {
+	font-weight: bold;
+	color: #898989;
+	text-decoration: none;
+}
+
+.postprofile a:hover, .postprofile dt.author a:hover {
+	text-decoration: underline;
+	color: #d3d3d3;
+}
+
+/* Poster profile block
+----------------------------------------*/
+.postprofile {
+	/* Also see tweaks.css */
+	margin: 5px 0 10px 0;
+	min-height: 80px;
+	color: #666666;
+	border-left: 1px solid #FFFFFF;
+	width: 15%;
+	float: right;
+	display: inline;
+}
+
+/*.pm .postprofile {
+	border-left: 1px solid #DDDDDD;
+}*/
+
+.postprofile dd, .postprofile dt {
+	line-height: 1.2em;
+	margin-left: 8px;
+	font-size: 0.9em;
+}
+
+.postprofile strong {
+	font-weight: normal;
+	color: #000000;
+}
+
+/* Profile links */
+.postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a {
+	color: #105289;
+}
+
+.postprofile a:hover, .postprofile dt.author a:hover {
+	color: #D31141;
+}
+
+.postprofile {
+	color: #666666;
+	border-left-color: #FFFFFF;
+}
+
+.rtl .postprofile {
+	border-right-color: #FFFFFF;
+	border-left-color: transparent;
+}
+
+.pm .postprofile {
+	border-left-color: #DDDDDD;
+}
+
+.rtl .pm .postprofile {
+	border-right-color: #DDDDDD;
+	border-left-color: transparent;
+}
+
+.postprofile strong {
+	color: #000000;
+}
+
+/* Coloured usernames */
+.username-coloured {
+	font-weight: bold;
+	display: inline !important;
+	padding: 0 !important;
 }

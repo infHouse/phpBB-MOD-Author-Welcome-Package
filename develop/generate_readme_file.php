@@ -72,9 +72,24 @@ class readme_config
 		self::$page_desc = 'How to get started building phpBB MODs';
 		self::$page_subtitle = 'Building phpBB3 MODs';
 		self::$author_info = array(
-			'name' 			=> 'Obsidian',
-			'avatar'		=> 'style/xkcd_avvy.png',
-			'rank'			=> 'Jr. MOD Validator',
+			1 => array(
+				'name' 			=> 'Obsidian',
+				'color'			=> '',
+				'phpbb_com'		=> 'http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595',
+				'avatar'		=> self::IMAGE_ROOT_PATH . 'xkcd_avvy.png',
+				'avatar_wid'	=> 100,
+				'avatar_hei'	=> 100,
+				'rank'			=> 'Jr. MOD Validator',
+			),
+			2 => array(
+				'name' 			=> 'SyntaxError90',
+				'color'			=> '#660099',
+				'phpbb_com'		=> 'http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=873955',
+				'avatar'		=> self::IMAGE_ROOT_PATH . 'engie_hat.png',
+				'avatar_wid'	=> 100,
+				'avatar_hei'	=> 100,
+				'rank'			=> 'MOD Team Member',
+			),
 		);
 		self::$meta_info = array(
 			'copyright'		=> '2010 Obsidian',
@@ -88,6 +103,7 @@ class readme_config
 			array(
 				'section_title'		=> 'test',
 				'unique_name'		=> 'test',
+				'author_id'			=> 1,
 				'contents'			=> array(
 'This is just a test.
 
@@ -124,7 +140,7 @@ class readme
 	{
 		// This is what we will return.  Append all data to this.
 		// Build the header area.
-		$return .= $this->append('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+		$this->append('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 			<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
 			<head>
 			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -162,7 +178,7 @@ class readme
 			
 		// Let's take a breather...
 			
-		$return .= $this->append('<p>' . readme_config::$intro . '</p>
+		$this->append('<p>' . readme_config::$intro . '</p>
 			<h1>' . readme_config::$page_subtitle . '</h1>
 			<div class="paragraph menu">
 				<div class="inner"><span class="corners-top"><span></span></span>
@@ -172,32 +188,42 @@ class readme
 		// Build the list of topics that will be discussed
 		foreach(readme_config::$main_data as $row)
 		{
-			$return .= $this->append("<li><a href=\"{$row['unique_name']}\">{$row['section_title']}</a></li>");
+			$this->append("<li><a href=\"{$row['unique_name']}\">{$row['section_title']}</a></li>");
 		}
 
-		$return .= $this->append('</ul>
+		$this->append('</ul>
 				</div>
 				<span class="corners-bottom"><span></span></span></div>
 			</div>');
 
 		foreach(readme_config::$main_data as $row)
 		{
-			$return .= $this->append("<hr />
+			$this->append("<hr />
 				<a name=\"{$row['unique_name']}\"></a><h2>{$row['section_title']}</h2>" . '
 				<div class="paragraph">
 					<div class="inner"><span class="corners-top"><span></span></span>
-						<div class="content">') . "\n";
+						<div class="content" ' . ((readme_config::DISABLE_AUTHOR_MODE === true) ? 'style="width: 100%;" ' : '') . '>') . "\n";
 			foreach($row['contents'] as $content)
 			{
-				$return .= $this->append('<p>' . str_replace("\n", "<br />\n", $content) . '</p>', true);
+				$this->append('<p>' . str_replace("\n", "<br />\n", $content) . '</p>', true);
 			}
-			$return .= $this->append('</div>
-				<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+			$this->append('</div>');
+			if(readme_config::DISABLE_AUTHOR_MODE !== true)
+			{
+				$this->append('<dl class="postprofile"> 
+					<dt> 
+						<a href="' . readme_config::$author_info[$row['author_id']]['phpbb_com'] . '"><img src="' . readme_config::$author_info[$row['author_id']]['avatar'] . '" width="' . readme_config::$author_info[$row['author_id']]['avatar_wid'] . '" height="' . readme_config::$author_info[$row['author_id']]['avatar_hei'] . '" alt="User avatar" /></a><br /> 
+						<a href="' . readme_config::$author_info[$row['author_id']]['phpbb_com'] . '" ' . ((readme_config::$author_info[$row['author_id']]['color']) ? 'style="color: ' . readme_config::$author_info[$row['author_id']]['color'] . ';" class="username-coloured"' : '') . '>' . readme_config::$author_info[$row['author_id']]['name'] . '</a> 
+					</dt> 
+					<dd>' . readme_config::$author_info[$row['author_id']]['rank'] . '</dd>
+				</dl>');
+			}
+			$this->append('<div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
 				<span class="corners-bottom"><span></span></span></div>
 			</div>');
 		}
 
-		$return .= $this->append('<!-- END DOCUMENT -->
+		$this->append('<!-- END DOCUMENT -->
 					<div id="page-footer">
 						<div class="version">' . readme_config::$footer . ' | ' . $this->revision . ' </div>
 					</div>

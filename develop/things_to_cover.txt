@@ -29,10 +29,13 @@
 - Code the PHP
 - Code the templates
 - Assemble the MODX from necessary edits
-=== TOOLS
+- Test the MOD thoroughly
+- Run the MOD through MPV
+=== FREE THIRD PARTY TOOLS
 - Version control (SVN/Git)
 - Version control tools (rapid svn, tortoisesvn, msysgit)
-- Version control repo hosts
+- Version control repo hosts (maybe not...)
 - Coding tools (IDEs, Notepad++, gedit, etc)
 - Testing tools (XAMPP, LAMP, MAMP, etc)
 - DB administration tools (Navicat)
+- Virtual Machine (Virtualbox)
