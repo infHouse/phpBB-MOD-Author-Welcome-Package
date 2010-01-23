@@ -254,7 +254,7 @@ class readme_html
 		switch(strtolower($name))
 		{
 			case 'code':
-				return "<div class=\"codebox\"><pre>{$arguments[0]}</pre></div>";
+				return "</p><div class=\"codebox\"><pre>{$arguments[0]}</pre></div><p>";
 			break;
 	
 			case 'bold':
