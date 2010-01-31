@@ -1,0 +1,8 @@
+<h3>Hey everyone!</h3>
+I am known around these parts as SyntaxError90, and for good reason. I haven't been modifying phpBB as long as Obsidian, but I am not stranger to PHP, C, and C++.
+
+<h4>MODing Benefits</h4>
+Obsidian explained what a MOD is, why do them at all? Aside for gaining some sort of feature to your board, you allow others to have the same feature. To mention you are contributing to the Open Source community.
+
+<h4>Explore phpBB</h4>
+Before you begin to read though MOD documentation, I highly recommend doing one thing: Explore phpBB. Not just the web interface, but the code that powers it. Pick some feature and find the code that powers it. You don't have to understand it right away, but it is easier to learn when you have questions about the code to be answered.
