@@ -121,7 +121,7 @@ class readme_config
 						'author'		=> 1,
 					),
 					array(
-						'content' 		=> 'blah',
+						'content' 		=> file_get_contents('./txt/sam_intro.txt'),
 						'author'		=> 2,
 					),
 				),
