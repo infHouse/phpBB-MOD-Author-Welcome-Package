@@ -30,42 +30,42 @@ class readme_config
 {
 	// Ye olde page title.
 	public static $page_title = '';
-	
+
 	// And a description of the page
 	public static $page_desc = '';
-	
+
 	// Hell, let's do a subtitle.
 	public static $page_subtitle = '';
-	
+
 	// Author's information.
 	// Should be an array containing elements "name", "avatar", and "rank".  Leave stuff blank if you don't want it to appear.
 	public static $author_info = array();
-	
+
 	// Stuff that we...stuff...into the meta tags.
 	public static $meta_info = array();
-	
+
 	// Intro message
 	public static $intro = '';
-	
+
 	// Idiot warnings.  It's not mah fault you broke your shiz.
 	public static $disclaimer = '';
 
 	// And to the meat of the matter...
 	public static $main_data = array();
-	
+
 	// Blah blah blah...stuff at the bottom
 	public static $footer = '';
 
 	// Root paths for style stuff and images
 	const STYLE_ROOT_PATH = 'html/style/';
 	const IMAGE_ROOT_PATH = 'html/images/';
-	
+
 	// The location of the readme file that we'll be dumping to
 	const README_FILE_PATH = './../';
 
 	// If we want this to be cold and impersonal, set to true.
 	const DISABLE_AUTHOR_MODE = false;
-	
+
 	public static function init()
 	{
 		self::$page_title = 'phpBB3 MOD Author Welcome Package';
@@ -107,7 +107,7 @@ class readme_config
 				'contents'			=> array(
 'This is just a test.
 
-' . readme_html::code('MD5
+' . html::code('MD5
 
 	' . md5('test')),
 				),
@@ -136,7 +136,6 @@ class readme_config
 					),
 				),
 			),
-			
 			array(
 				'section_title'		=> 'What is included within the Welcome Package',
 				'unique_name'		=> 'included_items',
@@ -197,8 +196,18 @@ class readme_config
 					),
 				),
 			),
+			array(
+				'section_title'		=> 'Test',
+				'unique_name'		=> 'test',
+				'contents'			=> array(
+					array(
+						'content' 		=> file_get_contents('./txt/test.txt'),
+						'author'		=> 1,
+					),
+				),
+			),
 		);
-		self::$footer = 'MOD Author Welcome Package &copy; 2010 ' . readme_html::bold('Obsidian');
+		self::$footer = 'MOD Author Welcome Package &copy; 2010 ' . html::bold('Obsidian');
 	}
 }
 
@@ -259,9 +268,9 @@ class readme
 				<a name="start_here"></a>
 				<div id="page-body">
 			<!-- BEGIN DOCUMENT -->');
-			
+
 		// Let's take a breather...
-			
+
 		$this->append('<p>' . readme_config::$intro . '</p>
 			<h1>' . readme_config::$page_subtitle . '</h1>
 			<div class="paragraph menu">
@@ -293,11 +302,11 @@ class readme
 				$this->append('</div>');
 				if(readme_config::DISABLE_AUTHOR_MODE !== true)
 				{
-					$this->append('<dl class="postprofile"> 
-						<dt> 
-							<a href="' . readme_config::$author_info[$c_row['author']]['phpbb_com'] . '"><img src="' . readme_config::$author_info[$c_row['author']]['avatar'] . '" width="' . readme_config::$author_info[$c_row['author']]['avatar_wid'] . '" height="' . readme_config::$author_info[$c_row['author']]['avatar_hei'] . '" alt="User avatar" /></a><br /> 
-							<a href="' . readme_config::$author_info[$c_row['author']]['phpbb_com'] . '" ' . ((readme_config::$author_info[$c_row['author']]['color']) ? 'style="color: ' . readme_config::$author_info[$c_row['author']]['color'] . ';" class="username-coloured"' : '') . '>' . readme_config::$author_info[$c_row['author']]['name'] . '</a> 
-						</dt> 
+					$this->append('<dl class="postprofile">
+						<dt>
+							<a href="' . readme_config::$author_info[$c_row['author']]['phpbb_com'] . '"><img src="' . readme_config::$author_info[$c_row['author']]['avatar'] . '" width="' . readme_config::$author_info[$c_row['author']]['avatar_wid'] . '" height="' . readme_config::$author_info[$c_row['author']]['avatar_hei'] . '" alt="User avatar" /></a><br />
+							<a href="' . readme_config::$author_info[$c_row['author']]['phpbb_com'] . '" ' . ((readme_config::$author_info[$c_row['author']]['color']) ? 'style="color: ' . readme_config::$author_info[$c_row['author']]['color'] . ';" class="username-coloured"' : '') . '>' . readme_config::$author_info[$c_row['author']]['name'] . '</a>
+						</dt>
 						<dd>' . readme_config::$author_info[$c_row['author']]['rank'] . '</dd>
 					</dl>');
 				}
@@ -319,7 +328,7 @@ class readme
 			</html>');
 		return $this->data;
 	}
-	
+
 	private function append($data, $tabsafe = false)
 	{
 		$data = explode("\n", $data);
@@ -331,7 +340,8 @@ class readme
 }
 
 // Something made to simplify code up within the readme_config class.
-class readme_html
+// @todo replace with a parser function that replaces faux-bbcode with desired HTML.
+class html
 {
 	public static function __callStatic($name, $arguments)
 	{
@@ -340,27 +350,27 @@ class readme_html
 			case 'code':
 				return "<div class=\"codebox\"><pre>{$arguments[0]}</pre></div>";
 			break;
-	
+
 			case 'bold':
 				return "<span style=\"font-weight: bold\">{$arguments[0]}</span>";
 			break;
-	
+
 			case 'italic':
 				return "<span style=\"font-style: italic\">{$arguments[0]}</span>";
 			break;
-	
+
 			case 'underline':
 				return "<span style=\"text-decoration: underline\">{$arguments[0]}</span>";
 			break;
-	
+
 			case 'color':
 				return "<span style=\"color: {$arguments[1]}\">{$arguments[0]}</span>";
 			break;
-	
+
 			case 'link':
 				return "<a href=\"{$arguments[1]}\" class=\"postlink\">{$arguments[0]}</a>";
 			break;
-	
+
 			case 'image':
 				return "<img src=\"{$arguments[1]}\" alt=\"{$arguments[0]}\" title=\"{$arguments[0]}\" />";
 			break;
@@ -375,4 +385,3 @@ class readme_html
 		}
 	}
 }
-?>

@@ -96,14 +96,14 @@ h4 {
 	border-top: 1px solid #ccc;
 }
 
-code { 
-	color: #006600; 
-	font-weight: normal; 
-	font-family: 'Courier New', monospace; 
-	border-color: #D1D7DC; 
-	border-width: 1px; 
-	border-style: solid; 
-	background-color: #FAFAFA; 
+code {
+	color: #006600;
+	font-weight: normal;
+	font-family: 'Courier New', monospace;
+	border-color: #D1D7DC;
+	border-width: 1px;
+	border-style: solid;
+	background-color: #FAFAFA;
 }
 
 #wrap {
@@ -435,4 +435,11 @@ a:active	{ color: #368AD2; }
 
 .post ul li {
 	line-height: 0.3em;
+}
+
+.info-warning {
+	background-color: #ECD5D8;
+	color: #BC2A4D;
+	border: solid 1px #BC2A4D;
+	padding: 15px;
 }
