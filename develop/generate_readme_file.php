@@ -136,6 +136,10 @@ class readme_config
 						'content' 		=> parse('included_automod.txt'),
 						'author'		=> 1,
 					),
+					array(
+						'content' 		=> parse('included_umil.txt'),
+						'author'		=> 1,
+					),
 				),
 			),
 			array(
