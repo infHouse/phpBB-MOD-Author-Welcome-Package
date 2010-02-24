@@ -201,7 +201,7 @@ class readme_config
 				'unique_name'		=> 'test',
 				'contents'			=> array(
 					array(
-						'content' 		=> file_get_contents('./txt/test.txt'),
+						'content' 		=> parse('test.txt'),
 						'author'		=> 1,
 					),
 				),
@@ -384,4 +384,48 @@ class html
 			break;
 		}
 	}
+}
+
+/**
+ * Parses an input txt file for docs
+ * @param string $filename - The filename to parse
+ * @return string - fauxcode->html parsed string pulled from the txt file
+ */
+function parse($filename)
+{
+	return _parse(file_get_contents('./txt/' . $filename));
+}
+
+/**
+ * Parses fauxcode in input text, then returns it
+ * @param string $text - The text to parse.
+ * @return string - fauxcode->html parsed string
+ */
+function _parse($text = '')
+{
+	// meh
+	$fauxcode = array(
+		// bold
+		"#\[b\](.*?)\[/b\]#is" => '<span style="font-weight: bold">$1</span>',
+		// italic
+		"#\[i\](.*?)\[/i\]#is" => '<span style="font-style: italic">$1</span>',
+		// underline
+		"#\[u\](.*?)\[/u\]#is" => '<span style="text-decoration: underline">$1</span>',
+		// color
+		'#\[color\=(.*?)\](.*?)\[/color\]#is' => '<span style="color: $1">$2</span>',
+		// link
+		'#\[url\=(.*?)\](.*?)\[/url\]#is' => '<a href="$1" title="$2" class="postlink">$2</a>',
+		// image
+		"#\[img\](.*?)\[/img\]#is" => '<img src="$0" alt="Image" />',
+		// code
+		"#\[code\](.*?)\[/code\]#is" => '<div class="codebox"><pre>$1</pre></div>',
+		// header
+		"#\[h\](.*?)\[/h\]#is" => '<h3>$1</h3>',
+		// subheader
+		"#\[hh\](.*?)\[/hh\]#is" => '<h4>$1</h4>',
+		// warning
+		"#\[warning\](.*?)\[/warning\]#is" => '<br /><div class="info-warning"><div class="warn-label">Warning!</div><div class="warn-text">$1</div></div><br />',
+	);
+
+	return preg_replace(array_keys($fauxcode), array_values($fauxcode), $text);
 }
