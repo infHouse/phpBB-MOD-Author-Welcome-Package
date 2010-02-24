@@ -100,18 +100,6 @@ class readme_config
 		self::$intro = 'Hey there, and welcome to the phpBB MOD Author Welcome Package. <br />This guide is intended to help you become a MOD author; within, you will learn how to modify phpBB to suit your needs and the needs of others, and how to do it <em>right</em>.';
 		self::$disclaimer = '';
 		self::$main_data = array(
-			/*array(
-				'section_title'		=> 'test',
-				'unique_name'		=> 'test',
-				'author_id'			=> 1,
-				'contents'			=> array(
-'This is just a test.
-
-' . html::code('MD5
-
-	' . md5('test')),
-				),
-			),*/
 			array(
 				'section_title'		=> 'Introduction',
 				'unique_name'		=> 'intro',
@@ -207,7 +195,7 @@ class readme_config
 				),
 			),
 		);
-		self::$footer = 'MOD Author Welcome Package &copy; 2010 ' . html::bold('Obsidian');
+		self::$footer = 'MOD Author Welcome Package &copy; 2010 ' . '<strong>Obsidian</strong>';
 	}
 }
 
@@ -335,53 +323,6 @@ class readme
 		foreach($data as $row)
 		{
 			$this->data .= ((!$tabsafe) ? trim($row) : $row) . "\n";
-		}
-	}
-}
-
-// Something made to simplify code up within the readme_config class.
-// @todo replace with a parser function that replaces faux-bbcode with desired HTML.
-class html
-{
-	public static function __callStatic($name, $arguments)
-	{
-		switch(strtolower($name))
-		{
-			case 'code':
-				return "<div class=\"codebox\"><pre>{$arguments[0]}</pre></div>";
-			break;
-
-			case 'bold':
-				return "<span style=\"font-weight: bold\">{$arguments[0]}</span>";
-			break;
-
-			case 'italic':
-				return "<span style=\"font-style: italic\">{$arguments[0]}</span>";
-			break;
-
-			case 'underline':
-				return "<span style=\"text-decoration: underline\">{$arguments[0]}</span>";
-			break;
-
-			case 'color':
-				return "<span style=\"color: {$arguments[1]}\">{$arguments[0]}</span>";
-			break;
-
-			case 'link':
-				return "<a href=\"{$arguments[1]}\" class=\"postlink\">{$arguments[0]}</a>";
-			break;
-
-			case 'image':
-				return "<img src=\"{$arguments[1]}\" alt=\"{$arguments[0]}\" title=\"{$arguments[0]}\" />";
-			break;
-
-			case 'header':
-				return "<h4>{$arguments[0]}</h4>";
-			break;
-
-			default:
-				return "<!-- unsupported HTML type \"{$name}\" -->";
-			break;
 		}
 	}
 }
