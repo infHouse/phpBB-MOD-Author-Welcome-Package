@@ -437,6 +437,9 @@ a:active	{ color: #368AD2; }
 	line-height: 0.3em;
 }
 
+/**
+ * This CSS being in a working shape is mostly thanks to topdown.  Kudos!
+ */
 .info-warning {
 	background-color: #ECD5D8;
 	color: #BC2A4D;
