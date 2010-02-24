@@ -442,21 +442,26 @@ a:active	{ color: #368AD2; }
 	color: #BC2A4D;
 	border: solid 1px #BC2A4D;
 	padding: 20px;
+	display:block;
+	float: left;
+	width:95%;
 	/*clear: both;*/
 }
 
 .warn-label {
-	/*float: left;*/
-	width: 70px;
+	float: left;
 	font-weight: bold;
+	display:block;
 	padding: 10px 20px 10px 0;
 	border-right: solid 1px #BC2A4D;
-	/*width: 50px;*/
+	width: 15%;
 }
 
 .warn-text {
 
-	/*float: left;*/
+	float: right;
+	display:block;
 	padding: 10px 10px 10px 20px;
+	width: 80%;
 
 }
