@@ -108,7 +108,7 @@ code {
 
 #wrap {
 	padding: 0 20px;
-	min-width: 650px;
+	min-width: 740px;
 }
 
 #simple-wrap {
@@ -444,8 +444,8 @@ a:active	{ color: #368AD2; }
 	padding: 20px;
 	display:block;
 	float: left;
-	width:95%;
-	/*clear: both;*/
+	width: 91%;
+	margin-bottom: 10px;
 }
 
 .warn-label {
@@ -454,14 +454,17 @@ a:active	{ color: #368AD2; }
 	display:block;
 	padding: 10px 20px 10px 0;
 	border-right: solid 1px #BC2A4D;
-	width: 15%;
+	width: 10%;
+	min-width: 70px;
 }
 
 .warn-text {
-
 	float: right;
 	display:block;
-	padding: 10px 10px 10px 20px;
-	width: 80%;
+	padding: 10px 10px 10px 0;
+	width: 73%;
+}
 
+.clear {
+	clear: both;
 }

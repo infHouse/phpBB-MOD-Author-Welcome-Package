@@ -424,7 +424,7 @@ function _parse($text = '')
 		// subheader
 		"#\[hh\](.*?)\[/hh\]#is" => '<h4>$1</h4>',
 		// warning
-		"#\[warning\](.*?)\[/warning\]#is" => '<br /><div class="info-warning"><div class="warn-label">Warning!</div><div class="warn-text">$1</div></div><div class="clear"></div><br />',
+		"#\[warning\](.*?)\[/warning\]#is" => '<br /><div class="info-warning"><div class="warn-label">Warning!</div><div class="warn-text">$1</div></div><div class="clear"></div>',
 	);
 
 	return preg_replace(array_keys($fauxcode), array_values($fauxcode), $text);
