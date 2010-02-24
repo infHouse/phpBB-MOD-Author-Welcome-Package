@@ -117,11 +117,11 @@ class readme_config
 				'unique_name'		=> 'intro',
 				'contents'			=> array(
 					array(
-						'content' 		=> file_get_contents('./txt/intro.txt'),
+						'content' 		=> parse('intro.txt'),
 						'author'		=> 1,
 					),
 					array(
-						'content' 		=> file_get_contents('./txt/sam_intro.txt'),
+						'content' 		=> parse('sam_intro.txt'),
 						'author'		=> 2,
 					),
 				),
@@ -131,7 +131,7 @@ class readme_config
 				'unique_name'		=> 'overview',
 				'contents'			=> array(
 					array(
-						'content' 		=> file_get_contents('./txt/needs.txt'),
+						'content' 		=> parse('needs.txt'),
 						'author'		=> 1,
 					),
 				),
