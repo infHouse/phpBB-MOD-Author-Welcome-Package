@@ -447,14 +447,16 @@ a:active	{ color: #368AD2; }
 
 .warn-label {
 	/*float: left;*/
-	padding-right: 5px;
+	width: 70px;
 	font-weight: bold;
 	padding: 10px 20px 10px 0;
 	border-right: solid 1px #BC2A4D;
-	width: 50px;
+	/*width: 50px;*/
 }
 
 .warn-text {
+
 	/*float: left;*/
 	padding: 10px 10px 10px 20px;
+
 }
