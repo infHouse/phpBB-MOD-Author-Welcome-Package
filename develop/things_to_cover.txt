@@ -14,13 +14,26 @@
 - template system (unless working with feeds)
 - $user (format_time() and localization)
 === CODING RESOURCES
-- phpBB Wiki
-- phpBB MOD Author discussion
-- Area51 discussion
-- php.net
+- phpBB Wiki - http://wiki.phpbb.com/
+- phpBB MOD Author discussion - http://www.phpbb.com/community/viewforum.php?f=71
+- phpBB Coding guidelines - http://code.phpbb.com/svn/phpbb/branches/phpBB-3_0_0/phpBB/docs/coding-guidelines.html
+- Area51 (phpBB Dev Board) - http://area51.phpbb.com/
+	- 3.x Discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=3
+	- 3.x New features discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=4
+	- 4.0 Discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=75
+- php.net - http://www.php.net/
+- W3Schools.com - http://www.w3schools.com/php/default.asp
+-
 === CODING HABITS
 - escape/typecast at point-of-query
 - make use of dbal::sql_in_set() !
+- comment obscure code, as well as functions/methods/classes/files.
+- don't leave extra whitespace at the ends of each line
+- indent for readability
+=== COMMON CODING MISTAKES
+- query in loop
+- request_var() misuse (i.e. string inject)
+- using $_POST, $_GET, $_SERVER, $_COOKIE directly
 === CODING PROCESS FOR LARGER MODS
 - What do you want it to do?
 - Features
@@ -32,10 +45,32 @@
 - Test the MOD thoroughly
 - Run the MOD through MPV
 === FREE THIRD PARTY TOOLS
-- Version control (SVN/Git)
+- Version control
+	- SVN
+	- Git
 - Version control tools (rapid svn, tortoisesvn, msysgit)
-- Version control repo hosts (maybe not...)
-- Coding tools (IDEs, Notepad++, gedit, etc)
-- Testing tools (XAMPP, LAMP, MAMP, etc)
-- DB administration tools (Navicat)
-- Virtual Machine (Virtualbox)
+	- RapidSVN
+	- TortoiseSVN
+	- Subclipse - SVN plugin for Eclipse
+	- msysgit
+	- TortoiseGit
+- Coding tools
+	- Eclipse PDT
+	- PSPad
+	- Komodo Edit
+	- Netbeans
+	- Zend Community Edition
+	- Notepad++ (Windows)
+	- gedit (Linux)
+	- geany (Linux, unstable though)
+- Testing tools
+	- XAMPP
+	- XAMPP for Linux
+	- MAMP
+- DB administration tools
+	- Navicat Lite
+	- MySQL GUI Tools
+	- MySQL Workbench
+- Virtual Machine
+	- Virtualbox
+- More extensive list available at http://www.phpbb.com/community/viewtopic.php?f=71&t=1669305

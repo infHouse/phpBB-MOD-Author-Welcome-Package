@@ -1,0 +1,10 @@
+[h]What is this stuff included with the welcome package?[/h]
+There are several utilities and tools tossed in with this readme file to round out this welcome package for prospective MOD authors, which include the following:
+<ul>
+	<li>AutoMOD</li>
+	<li>UMIL</li>
+	<li>MODX Quickstart documents</li>
+	<li>MODX Generator</li>
+</ul>
+
+Details of each item listed will be available in its own section below.

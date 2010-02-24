@@ -105,7 +105,7 @@ class readme_config
 				'unique_name'		=> 'intro',
 				'contents'			=> array(
 					array(
-						'content' 		=> parse('intro.txt'),
+						'content' 		=> parse('obsidian_intro.txt'),
 						'author'		=> 1,
 					),
 					array(
@@ -129,7 +129,11 @@ class readme_config
 				'unique_name'		=> 'included_items',
 				'contents'			=> array(
 					array(
-						'content' 		=> 'blah',
+						'content' 		=> parse('included_overview.txt'),
+						'author'		=> 1,
+					),
+					array(
+						'content' 		=> parse('included_automod.txt'),
 						'author'		=> 1,
 					),
 				),
@@ -334,6 +338,11 @@ class readme
  */
 function parse($filename)
 {
+	if(!file_exists('./txt/' . $filename))
+	{
+		echo 'File /txt/' . $filename . ' does not exist' . PHP_EOL . 'Generator failed.' . PHP_EOL;
+		exit;
+	}
 	return _parse(file_get_contents('./txt/' . $filename));
 }
 
@@ -354,8 +363,10 @@ function _parse($text = '')
 		"#\[u\](.*?)\[/u\]#is" => '<span style="text-decoration: underline">$1</span>',
 		// color
 		'#\[color\=(.*?)\](.*?)\[/color\]#is' => '<span style="color: $1">$2</span>',
-		// link
+		// link with custom title
 		'#\[url\=(.*?)\](.*?)\[/url\]#is' => '<a href="$1" title="$2" class="postlink">$2</a>',
+		// link
+		"#\[url\](.*?)\[/url\]#is" => '<a href="$1" title="$1" class="postlink">$1</a>',
 		// image
 		"#\[img\](.*?)\[/img\]#is" => '<img src="$0" alt="Image" />',
 		// code

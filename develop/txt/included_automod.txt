@@ -1,0 +1,14 @@
+[hh]AutoMOD[/hh]
+
+AutoMOD is a tool designed to parse and automatically install MODX MODifications for phpBB3.
+It also has the ability to uninstall MODs.
+It is a useful tool for MOD authors and end users alike: All MODs are installed with AutoMOD prior to being accepted in the MODs Database. As such, any MOD listed in the MOD Database should install with AutoMOD.
+
+[b]Included version:[/b] 1.0.0 RC 3
+
+[b]Available at:[/b] [url]http://www.phpbb.com/mods/automod/[/url]
+
+[b]Related Links:[/b]
+[url=http://www.phpbb.com/mods/modx/]MODX[/url] - [url=http://www.phpbb.com/mods/db/]phpBB.com MODs Database[/url] - [url=http://www.phpbb.com/bugs/modteamtools/]phpBB.com MOD Tools Bug Tracker[/url] - [url=http://code.phpbb.com/repositories/show/6]AutoMOD SVN Repository[/url]
+
+[warning]AutoMOD is development quality code, and as such it is recommended that backups be taken whenever using AutoMOD in case of data loss or corruption, or damage caused by a third-party modification.[/warning]

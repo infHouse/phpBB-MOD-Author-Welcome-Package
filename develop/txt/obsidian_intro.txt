@@ -1,0 +1,22 @@
+[h]Hello there![/h]
+I am Obsidian, and I have been working with modifying phpBB for about two years now. I'm writing this to help get you started with learning to build MODs for phpBB 3.0.x (codenamed "Olympus"), and to provide you with the resources and tools you need to succeed.
+
+[hh]Not sure what a phpBB MOD is?[/hh]
+Well, I'll explain.
+Because of phpBB being an open-source project, you are free to modify it to suit your needs as you wish.  When you modify your copy of phpBB, document the changes you have made, and distribute those changes, in essence you have released a MOD.
+In reality, it is a bit more involved than that, but don't sweat it; we'll get to that later.
+
+[hh]What all is in this welcome package?[/hh]
+This welcome package contains the guide that you are reading now, and several tools that are used by many MOD authors that you may want to use yourself.  A more in-depth overview of the tools included will appear later on in this guide.
+
+[hh]What will this guide cover?[/hh]
+Actually, it will be a broad range of things, including:
+<ul>
+	<li>The development process</li>
+	<li>Tools of the trade</li>
+	<li>Coding and development resources</li>
+	<li>Utilizing built-in phpBB3 functionality</li>
+	<li>Humorous source code comments in phpBB3</li>
+</ul>
+
+Okay, maybe not so much with that last one.  Ahh well.  I'll let Syntax have his say.
