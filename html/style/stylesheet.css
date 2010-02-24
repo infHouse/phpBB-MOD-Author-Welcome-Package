@@ -456,7 +456,6 @@ a:active	{ color: #368AD2; }
 	font-weight: bold;
 	display:block;
 	padding: 10px 20px 10px 0;
-	border-right: solid 1px #BC2A4D;
 	width: 10%;
 	min-width: 70px;
 }
@@ -464,7 +463,8 @@ a:active	{ color: #368AD2; }
 .warn-text {
 	float: right;
 	display:block;
-	padding: 10px 10px 10px 0;
+	padding: 10px 10px 10px 40px;
+	border-left: solid 1px #BC2A4D;
 	width: 73%;
 }
 
