@@ -1,0 +1,11 @@
+[hh]MODX Quickstart Files[/hh]
+
+MODX is a format by the phpBB MOD Team that is used to describe, in detail, changes between web applications suitable for distribution.
+It is an XML-based format for both MOD writers and users alike.
+
+[b]Included version:[/b] 1.2.3
+
+[b]Available at:[/b] [url]http://www.phpbb.com/mods/modx/[/url]
+
+[b]Related links:[/b]
+[url=http://www.phpbb.com/mods/modx/spec/]Technical MODX documentation[/url] - [url=http://www.phpbb.com/mods/modx/faq/]MODX Frequently Asked Questions[/url]

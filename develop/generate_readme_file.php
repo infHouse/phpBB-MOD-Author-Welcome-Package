@@ -134,11 +134,15 @@ class readme_config
 					),
 					array(
 						'content' 		=> parse('included_automod.txt'),
-						'author'		=> 1,
+						'author'		=> NULL,
 					),
 					array(
 						'content' 		=> parse('included_umil.txt'),
-						'author'		=> 1,
+						'author'		=> NULL,
+					),
+					array(
+						'content' 		=> parse('included_modx.txt'),
+						'author'		=> NULL,
 					),
 				),
 			),
@@ -293,10 +297,10 @@ class readme
 			{
 				$this->append('<div class="paragraph">
 					<div class="inner"><span class="corners-top"><span></span></span>
-						<div class="content post" ' . ((readme_config::DISABLE_AUTHOR_MODE === true) ? 'style="width: 100%;" ' : '') . '>');
+						<div class="content post" ' . ((readme_config::DISABLE_AUTHOR_MODE === true || $c_row['author'] === NULL) ? 'style="width: 100%;" ' : '') . '>');
 				$this->append(str_replace("\n", "<br />\n", $c_row['content']), true);
 				$this->append('</div>');
-				if(readme_config::DISABLE_AUTHOR_MODE !== true)
+				if(readme_config::DISABLE_AUTHOR_MODE !== true && $c_row['author'] !== NULL)
 				{
 					$this->append('<dl class="postprofile">
 						<dt>
