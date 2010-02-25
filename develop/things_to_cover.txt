@@ -1,7 +1,7 @@
 === WHAT YOU NEED
 - Idea or inspiration
 - Editor
-- Method to test
+- Method to test - @todo: link to the section on testing environments!
 - Knowledge of PHP, XHTML, and CSS (possibly JS as well)
 === WHAT YOU HAVE INCLUDED
 - AutoMOD + Documentation

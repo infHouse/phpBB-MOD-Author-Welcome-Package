@@ -24,4 +24,4 @@ The Unified MOD Install Library can perform any of the following operations as s
 
 [b]Available at:[/b] [url]http://www.phpbb.com/mods/umil/[/url]
 
-[b]Related links:[/b] [url=http://wiki.phpbb.com/UMIL]UMIL documentation on the phpBB Wiki[/url] - [url=http://www.phpbb.com/mods/umil/create.php]UMIF Creation Tool[/url] - [url=http://www.phpbb.com/bugs/modteamtools/]phpBB.com MOD Tools Bug Tracker[/url] [url=http://code.phpbb.com/repositories/show/umil]UMIL SVN Repository[/url]
+[b]Related links:[/b] [url=http://wiki.phpbb.com/UMIL]UMIL documentation on the phpBB Wiki[/url] - [url=http://www.phpbb.com/mods/umil/create.php]UMIF Creation Tool[/url] - [url=http://www.phpbb.com/bugs/modteamtools/]phpBB.com MOD Tools Bug Tracker[/url] - [url=http://code.phpbb.com/repositories/show/umil]UMIL SVN Repository[/url]

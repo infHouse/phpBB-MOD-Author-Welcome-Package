@@ -63,7 +63,7 @@ function parse($filename)
 		// color
 		'#\[color\=(.*?)\](.*?)\[/color\]#is' => '<span style="color: $1">$2</span>',
 		// link with custom title
-		'#\[url\=(.*?)\](.*?)\[/url\]#is' => '<a href="$1" title="$2" class="postlink">$2</a>',
+		'#\[url\=(.*?)\](.*?)\[/url\]#is' => '<a href="$1" title="$1" class="postlink">$2</a>',
 		// link
 		"#\[url\](.*?)\[/url\]#is" => '<a href="$1" title="$1" class="postlink">$1</a>',
 		// image
