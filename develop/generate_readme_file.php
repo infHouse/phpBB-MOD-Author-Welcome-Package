@@ -385,6 +385,8 @@ function _parse($text = '')
 		"#\[hh\](.*?)\[/hh\]#is" => '<h4>$1</h4>',
 		// warning
 		"#\[warning\](.*?)\[/warning\]#is" => '<br /><div class="info-warning"><div class="warn-label">Warning!</div><div class="warn-text">$1</div></div><div class="clear"></div>',
+		// info box
+		"#\[info\](.*?)\[/info\]#is" => '<div class="info"><div class="info-inner"><strong>Information</strong>: &nbsp; &nbsp; $1</div></div><br />'
 	);
 
 	return preg_replace(array_keys($fauxcode), array_values($fauxcode), $text);

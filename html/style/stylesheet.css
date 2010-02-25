@@ -478,3 +478,13 @@ a:active	{ color: #368AD2; }
 .clear {
 	clear: both;
 }
+
+.info {
+	border: solid 1px #cadceb;
+}
+
+.info-inner {
+	border: solid 1px #ECF3F7;
+	background-color: #e1ebf2;
+	padding: 10px;
+}
