@@ -184,7 +184,7 @@ class readme
 
 		$this->append('<!-- END DOCUMENT -->
 					<div id="page-footer">
-						<div class="version">' . readme_config::$footer . ' | Readme: $' . 'Id$' . ' | Generator: &#36;' . substr($this->revision, 1) . ' </div>
+						<div class="version">' . readme_config::$footer . ' <br />Readme: $' . 'Id$' . ' | Generator: &#36;' . substr($this->revision, 1) . ' </div>
 					</div>
 				</div></div>
 				<div>
