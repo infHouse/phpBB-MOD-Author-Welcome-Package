@@ -22,7 +22,6 @@
 require './generator_config.php';
 readme_config::init();
 $readme = new readme();
-$readme();
 file_put_contents(readme_config::$readme_file_path . 'readme.html', $readme);
 echo 'Done.' . PHP_EOL;
 exit;
@@ -96,7 +95,7 @@ class readme
 
 	// Here we build the HTML page.
 	// Get ready for some work.
-	public function __invoke()
+	public function __construct()
 	{
 		// This is what we will return.  Append all data to this.
 		// Build the header area.
@@ -185,7 +184,7 @@ class readme
 
 		$this->append('<!-- END DOCUMENT -->
 					<div id="page-footer">
-						<div class="version">' . readme_config::$footer . ' | ' . $this->revision . ' </div>
+						<div class="version">' . readme_config::$footer . ' | Readme: $' . 'Id$' . ' | Generator: &#36;' . substr($this->revision, 1) . ' </div>
 					</div>
 				</div></div>
 				<div>
