@@ -2,7 +2,7 @@
 Not much, actually.   Here's the basics of what you will need.
 
 [hh]A decent editor[/hh]
-I'm sorry, but Windows Notepad and Mac's Textmate just will not do.  We'll cover some free third-party editors later on.
+I'm sorry, but Windows Notepad and Mac's TextEdit just will not do.  We'll cover some free third-party editors later on.
 
 [hh]Basic PHP knowledge[/hh]
 If you are altering phpBB, you probably want to know what you are doing.  You don't need to know everything about PHP, but being comfortable with if(), foreach(), and variables will be a great help.  If you don't know, [url="http://www.google.com"]Google[/url] is your friend for finding some tutorials on coding in PHP.
@@ -11,7 +11,7 @@ If you are altering phpBB, you probably want to know what you are doing.  You do
 XHTML 1.0 and CSS are the languages of choice for formatting output to a user's web browser with phpBB.  You'll need to know these two so that the user can actually [i]see[/i] what your MOD can do...and so that you can make your MODs look pretty.
 
 [hh]A way to test your MOD[/hh]
-You're going to need a phpBB installation to test your MOD with.  A localhost test setup or an online site will do fine.
+You're going to need a phpBB installation to test your MOD with.  A localhost test server bundle (such as Apache, PHP, and MySQL, or a prepackaged compilation of the three) or an online site will do fine.  We'll cover some things you can use for a localhost server later on, as well.
 
 [hh]An idea![/hh]
 You need to know what you want your MODs to do, right?
