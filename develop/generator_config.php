@@ -150,7 +150,7 @@ class readme_config
 				'avatar'		=> 'xkcd_avvy.png',
 				'avatar_wid'	=> 100,
 				'avatar_hei'	=> 100,
-				'rank'			=> 'Jr. MOD Validator',
+				'rank'			=> 'MOD Author',
 			),
 			2 => array(
 				'name' 			=> 'SyntaxError90',
