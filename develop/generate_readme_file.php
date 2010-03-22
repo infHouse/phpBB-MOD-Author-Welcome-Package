@@ -145,7 +145,7 @@ class readme
 		// Build the list of topics that will be discussed
 		foreach(readme_config::$main_data as $key => $row)
 		{
-			$this->append("<li><a href='#" . md5($row['section_title'] . $key) . "'>{$row['section_title']}</a></li>");
+			$this->append('<li><a href="#' . md5($row['section_title'] . $key) . '">' . $row['section_title'] . '</a></li>');
 		}
 
 		$this->append('</ul>
@@ -155,8 +155,8 @@ class readme
 
 		foreach(readme_config::$main_data as $key => $row)
 		{
-			$this->append("<br /><hr />
-				<a name='" . md5($row['section_title'] . $key) . "'></a><h2>{$row['section_title']}</h2>");
+			$this->append('<br /><hr />
+				<a name="' . md5($row['section_title'] . $key) . '"></a><h2>' . $row['section_title'] . '</h2>');
 			foreach($row['contents'] as $c_row)
 			{
 				$this->append('<div class="paragraph">
