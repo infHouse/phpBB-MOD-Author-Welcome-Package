@@ -45,7 +45,7 @@ class readme_config
 	 *			// The height of your avatar, if you have one.
 	 *			'avatar_hei'	=> 100,
 	 *			// A rank title, if you have one.
-	 *			'rank'			=> 'Jr. MOD Validator',
+	 *			'rank'			=> 'some rank',
 	 *		),
 	 *		// You can repeat the previous array as many times as necessary.
 	 *	);
@@ -134,7 +134,7 @@ class readme_config
 		self::$page_desc = 'Open Source at its finest';
 		self::$page_subtitle = 'Building phpBB3 MODs';
 		self::$meta_info = array(
-			'copyright'		=> '2010 Obsidian',
+			'copyright'		=> '',
 			'keywords'		=> '',
 			'description'	=> 'phpBB 3.0.x MOD Author Welcome Package',
 			'emulate_ie7'	=> true, // Compatibility mode for that stupid browser that Microsoft makes
@@ -166,7 +166,7 @@ class readme_config
 		// Some basic content.
 		self::$intro = 'Hey there, and welcome to the phpBB MOD Author Welcome Package. <br />This guide is intended to help you become a MOD author; within, you will learn how to modify phpBB to suit your needs and the needs of others, and how to do it <em>right</em>.';
 		self::$disclaimer = '';
-		self::$footer = 'MOD Author Welcome Package &copy; 2010 ' . '<strong>Obsidian</strong>';
+		self::$footer = 'The phpBB MOD Author Welcome Package is not affiliated with or endorsed by the phpBB Group.';
 
 		// The CONTENT.
 		self::$main_data = array(
