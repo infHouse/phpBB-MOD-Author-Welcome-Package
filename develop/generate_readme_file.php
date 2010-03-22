@@ -86,9 +86,6 @@ function parse($filename)
  */
 class readme
 {
-	// Revision number for this document
-	protected $revision = '$Id$';
-
 	protected $data = '';
 
 	// Here we build the HTML page.
