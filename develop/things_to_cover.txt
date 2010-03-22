@@ -7,6 +7,8 @@
 - AutoMOD + Documentation
 - UMIL + UMIF example files + UMIL Documentation
 - MODX quickstart files
+- MODX generator
+- Offline MODx creator script - http://code.phpbb.com/projects/modxtools/repository/show/modx_creator_offline/trunk
 === WHAT YOU ARE REQUIRED TO DO/USE
 - MODX
 - DBAL
@@ -15,12 +17,15 @@
 - $user (format_time() and localization)
 === CODING RESOURCES
 - phpBB Wiki - http://wiki.phpbb.com/
+- Coding Tutorials for phpBB - http://wiki.phpbb.com/Category:Tutorials
 - phpBB MOD Author discussion - http://www.phpbb.com/community/viewforum.php?f=71
 - phpBB Coding guidelines - http://code.phpbb.com/svn/phpbb/branches/phpBB-3_0_0/phpBB/docs/coding-guidelines.html
+- Mod Pre-validator - http://www.phpbb.com/mods/mpv/
 - Area51 (phpBB Dev Board) - http://area51.phpbb.com/
-	- 3.x Discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=3
-	- 3.x New features discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=4
-	- 4.0 Discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=75
+	- phpBB 3.0.x Discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=3
+	- phpBB 3.0.x New features discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=4
+	- phpBB 3.1.x Discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=81
+	- phpBB 4.0 Discussion - http://area51.phpbb.com/phpBB/viewforum.php?f=75
 - php.net - http://www.php.net/
 - W3Schools.com - http://www.w3schools.com/php/default.asp
 -
@@ -29,7 +34,7 @@
 - make use of dbal::sql_in_set() !
 - comment obscure code, as well as functions/methods/classes/files.
 - don't leave extra whitespace at the ends of each line
-- indent for readability
+- _indent_ for readability
 === COMMON CODING MISTAKES
 - query in loop
 - request_var() misuse (i.e. string inject)
