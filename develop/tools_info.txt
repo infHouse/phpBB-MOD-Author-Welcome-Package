@@ -62,7 +62,7 @@ MODX is a format by the phpBB MOD Team that is used to describe, in detail, chan
 It is an XML-based format for both MOD writers and users alike.
 
 Included version:
-1.2.3
+1.2.5
 
 Related links:
 http://www.phpbb.com/mods/modx/spec/ - Technical MODX documentation
