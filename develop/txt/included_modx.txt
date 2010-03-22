@@ -3,7 +3,7 @@
 MODX is a format by the phpBB MOD Team that is used to describe, in detail, changes between web applications suitable for distribution.
 It is an XML-based format for both MOD writers and users alike.
 
-[b]Included version:[/b] 1.2.4
+[b]Included version:[/b] 1.2.5
 
 [b]Available at:[/b] [url]http://www.phpbb.com/mods/modx/[/url]
 
