@@ -30,13 +30,13 @@
 TITLE Readme File Generator
 
 :: Where is the PHP executable located?
-SET PHP=C:\xampp
+SET PHP=C:\xampp\php
 
 :: Where is the script located
 SET SCRIPT=C:\Code\mod_welcome\develop
 
 :: Run the script!
-"%PHP%\php\php.exe" "%SCRIPT%\generate_readme_file.php" %SCRIPT% %2 %3 %4
+"%PHP%\php.exe" "%SCRIPT%\generator.php" %SCRIPT% %2 %3 %4
 
 :: Uncomment this (remove the ::) to have the command prompt window pause after Failnet's termination.  
 :: Useful for trapping errors.
