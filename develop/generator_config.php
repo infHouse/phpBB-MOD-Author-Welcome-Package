@@ -144,7 +144,7 @@ class readme_config
 		self::$disable_author_mode = false;
 		self::$author_info = array(
 			1 => array(
-				'name' 			=> 'Obsidian',
+				'name' 			=> 'Desdenova',
 				'color'			=> '',
 				'phpbb_com'		=> 'http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=480595',
 				'avatar'		=> 'xkcd_avvy.png',
