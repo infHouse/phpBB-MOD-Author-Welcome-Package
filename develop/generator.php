@@ -69,7 +69,7 @@ function parse($filename)
 		// link
 		"#\[url\](.*?)\[/url\]#is" => '<a href="$1" title="$1" class="postlink">$1</a>',
 		// image
-		"#\[img\](.*?)\[/img\]#is" => '<img src="$0" alt="Image" />',
+		"#\[img\](.*?)\[/img\]#is" => '<img src="$1" alt="Image" />',
 		// code
 		"#\[code\](.*?)\[/code\]#is" => '<div class="codebox"><pre>$1</pre></div>',
 		// header
