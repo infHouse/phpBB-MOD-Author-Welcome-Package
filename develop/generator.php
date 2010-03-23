@@ -58,6 +58,10 @@ function parse($filename)
 		"#\[i\](.*?)\[/i\]#is" => '<span style="font-style: italic">$1</span>',
 		// underline
 		"#\[u\](.*?)\[/u\]#is" => '<span style="text-decoration: underline">$1</span>',
+		// unordered list
+		"#\[list\](.*?)\[/list\]#is" => '<ul>$1</ul>',
+		// list entry
+		"#\[\*\](.*?)\[/\*\]#is" => '<li>$1</li>',
 		// color
 		'#\[color\=(.*?)\](.*?)\[/color\]#is' => '<span style="color: $1">$2</span>',
 		// link with custom title

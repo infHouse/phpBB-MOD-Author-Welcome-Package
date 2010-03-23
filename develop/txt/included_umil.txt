@@ -9,16 +9,16 @@ AutoMOD is the tool of choice for file edits and installing MODs from a MODX fil
 What can UMIL do?
 
 The Unified MOD Install Library can perform any of the following operations as specified by a UMIF (Unified MOD Install File) provided by the Modification:
-<ul>
-	<li>Add, update, or remove configs</li>
-	<li>Add or remove modules</li>
-	<li>Add or remove permissions</li>
-	<li>Set or unset permission options from roles and groups</li>
-	<li>Add or remove database tables</li>
-	<li>Add, update, or remove table columns</li>
-	<li>Add or remove table keys/indexes</li>
-	<li>Purge / Refresh Caches</li>
-</ul>
+[list]
+	[*]Add, update, or remove configs[/*]
+	[*]Add or remove modules[/*]
+	[*]Add or remove permissions[/*]
+	[*]Set or unset permission options from roles and groups[/*]
+	[*]Add or remove database tables[/*]
+	[*]Add, update, or remove table columns[/*]
+	[*]Add or remove table keys/indexes[/*]
+	[*]Purge / Refresh Caches[/*]
+[/list]
 
 [b]Included version:[/b] 1.0.1-pl1
 

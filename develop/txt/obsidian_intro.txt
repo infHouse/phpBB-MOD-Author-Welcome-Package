@@ -11,12 +11,12 @@ This welcome package contains the guide that you are reading now, and several to
 
 [hh]What will this guide cover?[/hh]
 Actually, it will be a broad range of things, including:
-<ul>
-	<li>The development process</li>
-	<li>Tools of the trade</li>
-	<li>Coding and development resources</li>
-	<li>Utilizing built-in phpBB3 functionality</li>
-	<li>Humorous source code comments in phpBB3</li>
-</ul>
+[list]
+	[*]The development process[/*]
+	[*]Tools of the trade[/*]
+	[*]Coding and development resources[/*]
+	[*]Utilizing built-in phpBB3 functionality[/*]
+	[*]Humorous source code comments in phpBB3[/*]
+[/list]
 
 Okay, maybe not so much with that last one.  Ahh well.  I'll let Syntax have his say.
