@@ -1,0 +1,16 @@
+[hh]MODX Generator[/hh]
+
+The MODX Generator is a tool that will allow the automatic generation of MODX documents. It will take an original phpBB folder and compare it to a copy with applied modifications. The resulting diff is then converted to the MODX format. Copy, edit and inline actions are automatically generated.
+
+[info]This tool requires PHP 4.2.x or newer to run.[/info]
+
+[b]Included version[/b]: 1.0.0 Beta 2
+
+[b]Available at[/b]: [url]http://www.phpbb.com/mods/utilities/generator/[/url]
+
+[b]Related Links[/b]: [url=http://www.phpbb.com/community/viewtopic.php?f=71&t=1909725]MODX Generator Support/Discussion Topic @ phpBB.com[/url] - [url=http://www.phpbb.com/bugs/modteamtools/]phpBB.com MOD Tools Bug Tracker[/url] - [url=http://code.phpbb.com/repositories/browse/modxtools/modx_generator]MODX Generator SVN Repository[/url]
+
+[warning]The MODX Generator is development quality code, and as such it is recommended that backups be taken whenever using the MODX Generator in case of data loss or corruption.[/warning]
+[warning]MODX files generated with this tool can only be installed with AutoMOD SVN revision 206 or later.[/warning]
+
+

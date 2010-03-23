@@ -211,6 +211,10 @@ class readme_config
 						'content' 		=> parse('included_modx.txt'),
 						'author'		=> NULL,
 					),
+					array(
+						'content' 		=> parse('included_modx_generator.txt'),
+						'author'		=> NULL,
+					),
 				),
 			),
 			array(
